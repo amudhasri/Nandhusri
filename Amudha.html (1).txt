@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input[type="text"], input[type="number"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Student Portfolio</h1>
+
+
+    <h2>Student Information</h2>
+
+
+    <!-- Table to display student details -->
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Course</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>John Doe</td>
+            <td>22</td>
+            <td>johndoe@gmail.com</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Jane Smith</td>
+            <td>21</td>
+            <td>janesmith@hotmail.com</td>
+            <td>Business Administration</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Michael Lee</td>
+            <td>23</td>
+            <td>michaellee@aol.com</td>
+            <td>Mechanical Engineering</td>
+        </tr>
+    </table>
+
+
+    <h2>Add New Student</h2>
+
+
+    <!-- Form to input new student details -->
+    <form action="/submit_student" method="post">
+        <label for="student_id">Student ID:</label>
+        <input type="number" id="student_id" name="student_id" required><br>
+
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Business Administration">Business Administration</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Physics">Physics</option>
+        </select><br>
+
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional information..."></textarea><br>
+
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+</html>
+
